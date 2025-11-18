@@ -1,0 +1,112 @@
+/* --- NEW STYLES FOR MODERN REPORT --- */
+
+/* Loading State */
+.loading-state {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+}
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #0a9396;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Message */
+.error-message {
+    background-color: #fff0f0;
+    border: 1px solid #ffaaaa;
+    color: #d8000c;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Main Report Container */
+.report-container {
+    padding: 1rem;
+}
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+.report-header h2 {
+    margin: 0;
+    color: #005f73;
+}
+.score-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.1rem;
+}
+.score-badge.strong { background-color: #28a745; }
+.score-badge.common { background-color: #ffc107; color: #333; }
+.score-badge.weak { background-color: #dc3545; }
+
+/* Summary Card */
+.summary-card {
+    background: #e9f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 5px solid #0a9396;
+}
+.summary-card h3 {
+    margin-top: 0;
+    color: #005f73;
+}
+
+/* Comparison Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.factor-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.factor-card h3 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid;
+}
+.factor-card ul {
+    list-style: none;
+    padding: 0;
+}
+.factor-card ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.factor-card.similarities {
+    background-color: #eaf6ec;
+    border: 1px solid #c8e6c9;
+}
+.factor-card.similarities h3 {
+    color: #2e7d32;
+    border-color: #a5d6a7;
+}
+
+.factor-card.differences {
+    background-color: #ffebed;
+    border: 1px solid #ffcdd2;
+}
+.factor-card.differences h3 {
+    color: #c62828;
+    border-color: #ef9a9a;
+}
