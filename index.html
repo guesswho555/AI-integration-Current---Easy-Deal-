@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Deal - Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Easy Deal - Demo</h1>
+    </header>
+    <main>
+        <section class="url-input-section">
+            <h2>Enter Company URLs</h2>
+            <div class="url-inputs">
+                <input type="url" id="user-company-url" placeholder="Enter Your Company's URL">
+                <input type="url" id="target-company-url" placeholder="Enter Target Company's URL">
+            </div>
+            <button id="fetch-button">Confirm</button>
+        </section>
+
+        <section class="company-details">
+            <div class="company-column" id="user-company-details">
+                <h3>Your Company's Information</h3>
+                
+                <label for="user-company-name">Company Name</label>
+                <input type="text" id="user-company-name">
+
+                <label for="user-company-desc">Company Description</label>
+                <textarea id="user-company-desc" rows="8"></textarea>
+
+                <label for="user-company-industry">Industry Type</label>
+                <input type="text" id="user-company-industry">
+
+                <label for="user-company-size">Company Size</label>
+                <input type="text" id="user-company-size">
+
+                <label for="user-company-specialties">Specialties/Services</label>
+                <textarea id="user-company-specialties" rows="8"></textarea>
+            </div>
+            <div class="company-column" id="target-company-details">
+                <h3>Target Company's Information</h3>
+                
+                <label for="target-company-name">Company Name</label>
+                <input type="text" id="target-company-name">
+
+                <label for="target-company-desc">Company Description</label>
+                <textarea id="target-company-desc" rows="8"></textarea>
+
+                <label for="target-company-industry">Industry Type</label>
+                <input type="text" id="target-company-industry">
+
+                <label for="target-company-size">Company Size</label>
+                <input type="text" id="target-company-size">
+
+                <label for="target-company-specialties">Specialties/Services</label>
+                <textarea id="target-company-specialties" rows="8"></textarea>
+            </div>
+        </section>
+
+        <section class="report-section" id="report-output">
+            <!-- The modern report will be generated here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Marcus - Easy Deal (Testing)</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
